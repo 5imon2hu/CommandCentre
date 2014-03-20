@@ -1,0 +1,16 @@
+﻿<h1 >Scan items</h1>
+
+<div ng-show="basket.items.length">
+    <div ng-repeat="item in basket.items track by $index" class="item">
+        <span class="name">{{item.name}}</span>
+        <span class="price">{{item.price | number:2}}</span>
+        <div class="clearer">&nbsp;</div>
+    </div>
+
+    <div class="total">
+        {{basket.total() | number:2 }}
+    </div>
+
+    <h2 ng-click="finish()">Touch here to finish</h2>
+    
+</div>
